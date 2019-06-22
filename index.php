@@ -16,7 +16,7 @@
 					<div class="panel panel-heading" align="center">S   G   I   M   P</div>
 					<div class="panel panel-body">
 						<p>
-							<img src="img/workonline-logo-2xs.png"  height="100">
+							<img src="img/sgim-logo.png"  height="100">
 						</p>
 						<form id="frmLogin">
 							<label>Usuario</label>
