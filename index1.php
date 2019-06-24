@@ -6,6 +6,8 @@
 	<script src="librerias/jquery-3.2.1.min.js"></script>
 	<script src="js/funciones.js"></script>
 </head>
+
+
 <body style="background-image:url(img/fondoIC.jpg)">
 	<br><br><br>
 	<div class="container">
@@ -26,7 +28,7 @@
 							<p></p>
 							<span class="btn btn-primary btn-sm" id="entrarSistema">Ingresar</span>
 
-							<a href="registro.php" class="btn btn-danger btn-sm">Registrar</a>
+							
 						</form>
 					</div>
 				</div>
