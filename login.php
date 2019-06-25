@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Iniciar Sesión | SGIMP</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<script src="js/funciones.js"></script>
   </head>
   <body  style="background-image:url(img/fondoIC.jpg)">
   <?php require_once "barra.php"; ?>
@@ -23,7 +24,7 @@
 							<input type="email" class="form-control input-sm" name="email_persona" id="email_persona" placeholder="Ingrese su correo">
 							<input type="password" class="form-control input-sm" name="contrasenia_persona" id="contrasenia_persona" placeholder="Ingrese su Contraseña">
               <p></p>
-              <input type="submit" class="btn btn-primary" value="Iniciar">
+			  <span class="btn btn-primary" id="entrarSistema">Ingresar</span>
               <a href="registro.php" class="btn btn-danger ">Registrarse</a>
 						</form>
 					</div>
@@ -40,3 +41,36 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#entrarSistema').click(function(){
+
+		vacios=validarFormVacio('frmLogin');
+
+			if(vacios > 0){
+				alert("Debes llenar todos los campos!!");
+				return false;
+			}
+
+		datos=$('#frmLogin').serialize();
+		$.ajax({
+			type:"POST",
+			data:datos,
+			url:"procesos/regLogin/login.php",
+			success:function(r){
+
+				if(r==1){
+					window.location="vistas/inicio.php";
+				}else{
+					if(r==2){
+						window.location="perfil.php"
+					}else{
+						alert("No se pudo acceder usuario o clave incorrecto :(");
+					}
+
+				}
+			}
+		});
+	});
+	});
+</script>

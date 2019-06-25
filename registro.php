@@ -5,6 +5,7 @@
     <title>Registro</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <script src="js/funciones.js"></script>
   </head>
   <body style="background-image:url(img/fondoRG.jpg)">
   <?php require_once "barra.php"; ?>
@@ -39,3 +40,32 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#registro').click(function(){
+
+			vacios=validarFormVacio('frmRegistro');
+
+			if(vacios > 0){
+				alert("Debes llenar todos los campos!!");
+				return false;
+			}
+
+			datos=$('#frmRegistro').serialize();
+			$.ajax({
+				type:"POST",
+				data:datos,
+				url:"procesos/regLogin/registrarUsuario.php",
+				success:function(r){
+					alert(r);
+
+					if(r==1){
+						alert("Agregado con exito");
+					}else{
+						alert("Fallo al agregar :(");
+					}
+				}
+			});
+		});
+	});
+</script>
