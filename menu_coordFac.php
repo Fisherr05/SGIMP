@@ -34,18 +34,15 @@
                   <a class="nav-link" href="estado.php">Subproyectos</a>
               </li>
                <li class="nav-item">
-                  <a class="nav-link" href="estado.php">Estados</a>
+                  <a class="nav-link" href="estado.php">Componentes</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="componente.php">Componentes</a>
-              </li>
-                    <li class="nav-item">
                   <a class="nav-link" href="componente.php">Actividades</a>
-                        <li class="nav-item">
-                  <a class="nav-link" href="componente.php">Archivos</a>
               </li>
                     <li class="nav-item">
-                  <a class="nav-link" href="componente.php">Planificación</a>
+                  <a class="nav-link" href="componente.php">Archivos</a>
+                        <li class="nav-item">
+                  <a class="nav-link" href="componente.php">Componentes</a>
               </li>
               </li>
               <li class="nav-item">

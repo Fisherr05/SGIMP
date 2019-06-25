@@ -30,10 +30,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Proyectos</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="estado.php">Subproyectos</a>
-              </li>
-               <li class="nav-item">
+                   <li class="nav-item">
                   <a class="nav-link" href="estado.php">Estados</a>
               </li>
               <li class="nav-item">
@@ -45,7 +42,7 @@
                   <a class="nav-link" href="componente.php">Archivos</a>
               </li>
                     <li class="nav-item">
-                  <a class="nav-link" href="componente.php">Planificación</a>
+                  <a class="nav-link" href="componente.php">Estados de Actividades</a>
               </li>
               </li>
               <li class="nav-item">

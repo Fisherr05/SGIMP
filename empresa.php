@@ -16,14 +16,23 @@
       <div class="card card-body">
       <form action="{{url_for('añadir_estudiante')}}" method="POST">
                   <div class="form-group">
-                    <input type="text" class="form-control" name="cod_est" placeholder="Código de Estado">
+                    <input type="text" class="form-control" name="cod_emp" placeholder="Código de la Empresa">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" name="nom_est" placeholder="Nombre del Estado"> <!--aqui va un select-->
+                    <input type="text" class="form-control" name="nom_emp" placeholder="Nombre de la Empresa">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" name="descrip_est" placeholder="Descripción del Estado">
-                  </div>     
+                      <input type="email" class="form-control" name="email_emp" placeholder="Email de la Empresa">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" name="web_emp" placeholder="Web de la  Empresa">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" name="direc_emp" placeholder="Dirección de la  Empresa">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" name="descrip_emp" placeholder="Descricpión de la  Empresa">
+                  </div>
                   <button class="btn btn-primary btn-block">
                     Guardar
                   </button>
@@ -34,16 +43,23 @@
     <table class="table table-striped table-hover table-bordered table-sm bg-white">
                   <thead>
                     <tr>
-                      <td>Codigo</td>
+                      <td>Código</td>
                       <td>Nombre</td>
+                      <td>Email</td>
+                      <td>Página Web</td>
+                      <td>Dirección</td>
                       <td>Descripción</td>
-                     </tr>
+                                         
+                    </tr>
                   </thead>
                   <tbody id="facultades">
-                      <td>Codigo</td>
+                     <td>Código</td>
                       <td>Nombre</td>
+                      <td>Email</td>
+                      <td>Página Web</td>
+                      <td>Dirección</td>
                       <td>Descripción</td>
-                       <td>
+                        <td>
                         <a href="#" class="btn btn-secondary">editar</a>
                       </td>
                       <td>

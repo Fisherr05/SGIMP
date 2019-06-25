@@ -16,14 +16,23 @@
       <div class="card card-body">
       <form action="{{url_for('añadir_estudiante')}}" method="POST">
                   <div class="form-group">
-                    <input type="text" class="form-control" name="cod_est" placeholder="Código de Estado">
+                    <input type="text" class="form-control" name="cod_subp" placeholder="Código de SubProyecto">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" name="nom_est" placeholder="Nombre del Estado"> <!--aqui va un select-->
+                        <select class="form-control" placeholder="Codigo Proyecto">
+                                <option>Código #1</option>
+                                <option>Código #2</option>
+                                <option>Código #3</option>
+                        </select>
+                  </div>
+                <div class="form-group">
+                  Fecha Inicial<input type="date" class="form-control" name="fechain_SubP">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" name="descrip_est" placeholder="Descripción del Estado">
-                  </div>     
+                  Fecha Final<input type="date" class="form-control" name="fechafin_SubP">
+                  </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="avanceG_SubP" placeholder="% de Avance General ">                   </div>
                   <button class="btn btn-primary btn-block">
                     Guardar
                   </button>
@@ -34,16 +43,22 @@
     <table class="table table-striped table-hover table-bordered table-sm bg-white">
                   <thead>
                     <tr>
-                      <td>Codigo</td>
-                      <td>Nombre</td>
-                      <td>Descripción</td>
-                     </tr>
+                      <td>Codigo SubProyecto</td>
+                      <td>Código Proyecto</td>
+                      <td>Fecha Inicio</td>
+                      <td>Fecha Final</td>
+                      <td>Avance General</td>
+                       
+                    </tr>
                   </thead>
                   <tbody id="facultades">
-                      <td>Codigo</td>
-                      <td>Nombre</td>
-                      <td>Descripción</td>
-                       <td>
+                      <td>Codigo SubProyecto</td>
+                      <td>Código Proyecto</td>
+                      <td>Fecha Inicio</td>
+                      <td>Fecha Final</td>
+                      <td>Avance General</td>
+                      
+                     <td>
                         <a href="#" class="btn btn-secondary">editar</a>
                       </td>
                       <td>
