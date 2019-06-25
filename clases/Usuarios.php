@@ -5,12 +5,12 @@
 			$c=new conectar();
 			$conexion=$c->conexion();
 
-			$sql="INSERT into persona (cedula,
-								contraseña,
-								nombre,
-								apellido,
-								email,
-								telefono,
+			$sql="INSERT into persona (CEDULA,
+								password,
+								NOMBRE,
+								APELLIDO,
+								EMAIL,
+								TELEFONO,
 								direccion)
 						values ('$datos[1]',
 								'$datos[2]',
@@ -43,8 +43,8 @@
 
 			$sql="SELECT * 
 				from persona 
-				where email_persona='$datos[0]'
-				and contrasenia_persona='$datos[1]'";
+				where EMAIL='$datos[0]'
+				and password='$datos[1]'";
 
 			$result=mysqli_query($conexion,$sql);
 			$row = $result->fetch_array();
