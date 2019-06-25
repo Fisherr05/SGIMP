@@ -1,7 +1,7 @@
 /*--CREAR TABLA "PERSONA"*/ 
 create table INICIO_SESION(
-id_usuario int not null,
-contrasenia varchar(10) not null,
+ID_USUARIO int not null,
+password varchar(10) not null,
 primary key (id_usuario)
 );
 
