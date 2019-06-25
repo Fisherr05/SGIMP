@@ -7,7 +7,7 @@
   <title>Todo App</title>
     <!-- BOOTSTRAP 4  -->
     <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
   <?php require_once "menu-admin.php"; ?>
