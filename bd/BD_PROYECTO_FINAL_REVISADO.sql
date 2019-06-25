@@ -1,4 +1,10 @@
 /*--CREAR TABLA "PERSONA"*/ 
+create table INICIO_SESION(
+id_usuario int not null,
+contrasenia varchar(10) not null,
+primary key (id_usuario)
+);
+
 CREATE TABLE PERSONA(
 ID_PERSONA INT unsigned not null auto_increment,
 CEDULA VARCHAR (10) NOT NULL CHECK(CEDULA LIKE '%[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]%'), 
@@ -8,6 +14,7 @@ APELLIDO VARCHAR (40) NOT NULL,
 EMAIL VARCHAR (30) NOT NULL,
 TELEFONO INTEGER NOT NULL CHECK(LEN(TELEFONO)=10 OR LEN(TELEFONO)=7 ),
 DIRECCION VARCHAR (30) NOT NULL,
+foreign key (id_usuario) references INICIO_SESION(id_usuario),
 PRIMARY KEY(ID_PERSONA)
 );
 
