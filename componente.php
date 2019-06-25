@@ -10,7 +10,9 @@
     <?php require_once "layout.php"; ?>
 
     <div class="row">
-    <div class="col-md-5">
+      <div class="container">
+        <div class="row p-4">
+        <div class="col-md-5">
       <div class="card card-body">
       <form action="{{url_for('añadir_estudiante')}}" method="POST">
                   <div class="form-group">
@@ -78,6 +80,8 @@
     </div>
   </div>
 </div>
+        </div>
+      </div>
     </div>
     
 </body>
