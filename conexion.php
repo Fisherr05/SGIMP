@@ -22,6 +22,6 @@ and open the template in the editor.
 //echo 'Éxito... ' . $mysqli->host_info . "\n";
 
 //$mysqli->close();
-        ?>
+        ?> 
     </body>
 </html>

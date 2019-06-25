@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
           <a class="navbar-brand" href="index.html">
-          <img class="img-responsive logo img-thumbnail" alt="" width="150px" height="150px" src="logo.png">
+          <img class="img-responsive logo img-thumbnail" alt="" width="150px" height="150px" src="img/logo.png">
           </a>
           <button
             class="navbar-toggler"
