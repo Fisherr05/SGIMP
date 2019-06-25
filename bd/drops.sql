@@ -16,3 +16,4 @@ drop table CARRERA;
 drop table FACULTAD;
 drop table COORDINADOR_GENERAL;
 drop table PERSONA ;
+drop table INICIO_SESION;
