@@ -1,9 +1,9 @@
 ﻿<?php
 $servidor = "localhost"; //el servidor que utilizaremos, en este caso será el localhost
-$usuario = "user"; //El usuario que acabamos de crear en la base de datos
+$usuario = "user4"; //El usuario que acabamos de crear en la base de datos
 $contrasenha = "fibeca0596"; //La contraseña del usuario que utilizaremos
-$basededatos = "workonline"; //El nombre de la base de datos
-$dsn = 'mysql:dbname=workonline;host=localhost';
+$basededatos = "baseapp4"; //El nombre de la base de datos
+$dsn = 'mysql:dbname=baseapp4;host=localhost';
 $id_servicio="5";
 //$conexion = mysqli_connect( $servidor, $usuario,$contrasenha);
 $conexion = mysqli_connect( $servidor, $usuario,$contrasenha) or die ("No se ha podido conectar al servidor de Base de datos");
