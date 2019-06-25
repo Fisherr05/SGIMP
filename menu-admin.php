@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
           <a class="navbar-brand" href="/">
-          <img class="img-responsive logo img-thumbnail" src="logo.png">
+          <img class="img-responsive logo img-thumbnail " alt="" width="150px" height="150px" src="logo.png">
           </a>
           <button
             class="navbar-toggler"

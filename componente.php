@@ -8,14 +8,11 @@
 </head>
 <body>
     <?php require_once "layout.php"; ?>
+
     <div class="row">
-      <div class="container">
-        <div class="row p-4">
-          <div class="col-md-5">
-            <div class="card">
-              <div class="card-body">
-                <!-- FORM TO ADD TASKS -->
-                <form action="{{url_for('añadir_estudiante')}}" method="POST">
+    <div class="col-md-5">
+      <div class="card card-body">
+      <form action="{{url_for('añadir_estudiante')}}" method="POST">
                   <div class="form-group">
                     <input type="text" class="form-control" name="cod_comp" placeholder="Código de Componente">
                   </div>
@@ -41,27 +38,10 @@
                     Guardar
                   </button>
                 </form>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- TABLE  -->
-          <div class="col-md-7">
-
-              <form class="form-inline my-2 my-lg-0 ml-auto">
-                  <input name="search" id="search" class="form-control  bg-white col-md-6" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-
-                <br>
-              <div class="card my-4" id="task-result">
-                <div class="card-body">
-                  <!-- SEARCH -->
-                  <ul id="container"></ul>
-                </div>
-              </div>
-                <table class="table table-striped table-hover table-bordered table-sm bg-white">
+      </div>
+    </div>
+    <div class="col-md-7">
+    <table class="table table-striped table-hover table-bordered table-sm bg-white">
                   <thead>
                     <tr>
                       <td>Id</td>
@@ -95,8 +75,10 @@
                     </tr>
                   </tbody>
                 </table>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
+</div>
+    </div>
+    
 </body>
 </html>
