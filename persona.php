@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
+<style>
+    h1 { color: #FFFFFF; }
+    h3 { color: #FFFFFF; }
+  </style>
 <body style="background-image:url(img/fondo.jpg)">
 <?php require_once "menu-persona.php"; ?>
   <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -22,6 +26,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Frontend Logic -->
+    <header>
+    <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    <div class="container">
+      <div class="col-md4">
+      <h1 class= "card card-body bg-dark"><center>BIENVENIDO</center></h1>
+            <h3 class= "card card-body bg-dark"><center>En breve se contactará con ud el Coordinador General</center></h3>
+      </div>
+    </div>
+      </header>
 </body>
 </html>
 <?php 
