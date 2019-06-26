@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -20,7 +21,7 @@
 						<p>
 							<img class="img-responsive logo img-thumbnail" src="img/sgimp-logo.png"   height="97">
 						</p>
-						<form id="frmLogin">
+						<form id="frmLogin" action="login-p.php" method="POST">
 							<input type="email" class="form-control input-sm" name="email_persona" id="email_persona" placeholder="Ingrese su correo">
 							<input type="password" class="form-control input-sm" name="contrasenia_persona" id="contrasenia_persona" placeholder="Ingrese su Contraseña">
               <p></p>
@@ -51,26 +52,6 @@
 				alert("Debes llenar todos los campos!!");
 				return false;
 			}
-
-		datos=$('#frmLogin').serialize();
-		$.ajax({
-			type:"POST",
-			data:datos,
-			url:"procesos/regLogin/login.php",
-			success:function(r){
-
-				if(r==1){
-					window.location="vista_coordGEN.php";
-				}else{
-					if(r==2){
-						window.location="persona.php"
-					}else{
-						alert("No se pudo acceder usuario o clave incorrecto :(");
-					}
-
-				}
-			}
-		});
 	});
 	});
 </script>
