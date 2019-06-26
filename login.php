@@ -1,4 +1,5 @@
 
+  <?php require_once "login-p.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -16,14 +17,19 @@
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4  bg-white border border-secondary">
 				<div class="panel panel-primary card-body ">
+				<div class="alert alert-info" role="alert">
+				<?php if(!empty($message)): ?>
+      <?= $message ?>
+    <?php endif; ?>
+					</div>
 					<div class="panel panel-heading" align="center"></div>
 					<div class="panel panel-body">
 						<p>
 							<img class="img-responsive logo img-thumbnail" src="img/sgimp-logo.png"   height="97">
 						</p>
 						<form id="frmLogin" action="login-p.php" method="POST">
-							<input type="email" class="form-control input-sm" name="email_persona" id="email_persona" placeholder="Ingrese su correo">
-							<input type="password" class="form-control input-sm" name="contrasenia_persona" id="contrasenia_persona" placeholder="Ingrese su Contraseña">
+							<input type="email" class="form-control input-sm" name="email" id="email" placeholder="Ingrese su correo">
+							<input type="password" class="form-control input-sm" name="password" id="password" placeholder="Ingrese su Contraseña">
               <p></p>
 			  <span class="btn btn-primary" id="entrarSistema">Ingresar</span>
               <a href="registro.php" class="btn btn-danger ">Registrarse</a>
