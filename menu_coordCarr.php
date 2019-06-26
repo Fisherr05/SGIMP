@@ -28,7 +28,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">Proyectos</a>
+                <a class="nav-link" href="poyecto.php">Proyectos</a>
               </li>
                    <li class="nav-item">
                   <a class="nav-link" href="estado.php">Estados</a>
@@ -37,12 +37,12 @@
                   <a class="nav-link" href="componente.php">Componentes</a>
               </li>
                     <li class="nav-item">
-                  <a class="nav-link" href="componente.php">Actividades</a>
+                  <a class="nav-link" href="actividad.php">Actividades</a>
                         <li class="nav-item">
                   <a class="nav-link" href="componente.php">Archivos</a>
               </li>
                     <li class="nav-item">
-                  <a class="nav-link" href="componente.php">Estados de Actividades</a>
+                  <a class="nav-link" href="reportes/reporte_actividades.php">Estados de Actividades</a>
               </li>
               </li>
               <li class="nav-item">
