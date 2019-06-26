@@ -31,7 +31,7 @@
       <input name="email" type="text" class="form-control input-sm" placeholder="Ingrese su correo">
       <input name="password" type="password" class="form-control input-sm" placeholder="Ingrese su contraseña">
 	  <input type="submit" class="btn btn-primary" value="Ingresar">
-	  <input type="submit" class="btn btn-danger" value="Registrarse">
+          <a href="registro.php" class="btn btn-danger">Registrarse</a>
     </form>
 					</div>
 				</div>
