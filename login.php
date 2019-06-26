@@ -1,5 +1,5 @@
 
-  <?php require_once "login-p.php"; ?>
+<?php require 'login-p.php';?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,7 +7,6 @@
     <title>Iniciar Sesión | SGIMP</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
-	<script src="js/funciones.js"></script>
   </head>
   <body  style="background-image:url(img/fondoIC.jpg)">
   <?php require_once "barra.php"; ?>
@@ -17,8 +16,9 @@
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4  bg-white border border-secondary">
 				<div class="panel panel-primary card-body ">
-				<div class="alert alert-info" role="alert">
+				
 				<?php if(!empty($message)): ?>
+				<div class="alert alert-info" role="alert">
       <?= $message ?>
     <?php endif; ?>
 					</div>
@@ -27,13 +27,12 @@
 						<p>
 							<img class="img-responsive logo img-thumbnail" src="img/sgimp-logo.png"   height="97">
 						</p>
-						<form id="frmLogin" action="login-p.php" method="POST">
-							<input type="email" class="form-control input-sm" name="email" id="email" placeholder="Ingrese su correo">
-							<input type="password" class="form-control input-sm" name="password" id="password" placeholder="Ingrese su Contraseña">
-              <p></p>
-			  <span class="btn btn-primary" id="entrarSistema">Ingresar</span>
-              <a href="registro.php" class="btn btn-danger ">Registrarse</a>
-						</form>
+						<form action="login.php" method="POST">
+      <input name="email" type="text" class="form-control input-sm" placeholder="Ingrese su correo">
+      <input name="password" type="password" class="form-control input-sm" placeholder="Ingrese su contraseña">
+	  <input type="submit" class="btn btn-primary" value="Ingresar">
+	  <input type="submit" class="btn btn-danger" value="Registrarse">
+    </form>
 					</div>
 				</div>
 			</div>
@@ -48,16 +47,3 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#entrarSistema').click(function(){
-
-		vacios=validarFormVacio('frmLogin');
-
-			if(vacios > 0){
-				alert("Debes llenar todos los campos!!");
-				return false;
-			}
-	});
-	});
-</script>
