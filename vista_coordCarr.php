@@ -13,7 +13,7 @@
 
 </head>
 <body>
-		<?php require_once "menu-persona.php"; ?>
+		<?php require_once "menu-admin.html"; ?>
 
 </body>
 </html>
