@@ -18,8 +18,7 @@
 					<div class="panel panel-body">
 						<form id="frmRegistro">
               <input type="text" class="form-control input-sm" name="cedula" id="cedula" placeholder="Ingrese su cédula">
-              <input type="Password" class="form-control input-sm" name="password1" id="password1" placeholder="Ingrese su Contraseña">
-              <input type="Password" class="form-control input-sm" name="password2" id="password2" placeholder="Ingrese nuevamente su Contraseña">
+              <input type="Password" class="form-control input-sm" name="password" id="password" placeholder="Ingrese su Contraseña">
               <input type="text" class="form-control input-sm" name="nombre" id="nombre" placeholder="Ingrese un nombre">
               <input type="text" class="form-control input-sm" name="apellido" id="apellido" placeholder="Ingrese un apellido">
               <input type="text" class="form-control input-sm" name="email" id="email" placeholder="Ingrese un correo electrónico">
@@ -50,8 +49,7 @@
 				alert("Debes llenar todos los campos!!");
 				return false;
 			}
-
-			datos=$('#frmRegistro').serialize();
+      datos=$('#frmRegistro').serialize();
 			$.ajax({
 				type:"POST",
 				data:datos,

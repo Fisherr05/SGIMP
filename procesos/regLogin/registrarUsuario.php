@@ -6,13 +6,13 @@
 	$obj= new usuarios();
 
 	$datos=array(
-		$_POST['nombre_persona'],
-		$_POST['apellido_persona'],
-		$_POST['telefono_persona'],
-		$_POST['direccion_persona'],
-		$_POST['email_persona'],
-		$_POST['edad_persona'],
-		$_POST['contrasenia_persona']
+		$_POST['cedula'],
+		$_POST['password'],
+		$_POST['nombre'],
+		$_POST['apellido'],
+		$_POST['email'],
+		$_POST['telefono'],
+		$_POST['direccion']
 				);
 
 	echo $obj->registroUsuario($datos);

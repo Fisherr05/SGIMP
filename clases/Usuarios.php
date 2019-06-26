@@ -4,28 +4,29 @@
 		public function registroUsuario($datos){
 			$c=new conectar();
 			$conexion=$c->conexion();
-
-			$sql="INSERT into persona (CEDULA,
+			$pass=password_hash($datos[1],PASSWORD_BCRYPT);
+			$sql="INSERT into PERSONA (CEDULA,
 								password,
 								NOMBRE,
 								APELLIDO,
 								EMAIL,
 								TELEFONO,
-								direccion)
-						values ('$datos[1]',
+								DIRECCION)
+						values ('$datos[0]',
+								'$pass',
 								'$datos[2]',
 								'$datos[3]',
 								'$datos[4]',
 								'$datos[5]',
-								'$datos[6]',
-								'$datos[7]')";
-			$r=mysqli_query($conexion,$sql);
+								'$datos[6]')";
 
-			if($datos[5]=='admin'){
-				$sql2="INSERT into coordinador_general(id_persona)
-												SELECT id_persona
-												from persona 
-												where password='$datos[2]'";
+			
+			$r=mysqli_query($conexion,$sql);
+			if($datos[4]=='admin'){
+				$sql2="INSERT into COORDINADOR_GENERAL(ID_PERSONA)
+												SELECT ID_PERSONA
+												from PERSONA
+												where password='$datos[1]'";
 			    mysqli_query($conexion,$sql2);
 
 				}
@@ -37,23 +38,19 @@
 			$c=new conectar();
 			$conexion=$c->conexion();
 			//$password=sha1($datos[1]);
-
-			$_SESSION['email_persona']=$datos[0];
-			$_SESSION['id_persona']=self::traeID($datos);
-
 			$sql="SELECT * 
-				from persona 
-				where EMAIL='$datos[0]'
-				and password='$datos[1]'";
+				from PERSONA 
+				where EMAIL='$datos[0]'";
 
 			$result=mysqli_query($conexion,$sql);
-			$row = $result->fetch_array();
+			$row = mysqli_fetch_array($result);
+			//$a=password_verify($datos[1], $row[1]);
 
-			
-
-			if(mysqli_num_rows($result) > 0){
-				$sql2="INSERT into inicio_sesion(contrasenia)
-												values('$datos[1]') ";
+			if(mysqli_num_rows($result) > 0 && password_verify($datos[1], $row[2]) ){
+				$_SESSION['email_persona']=$row[5];
+				$_SESSION['id_persona']=$row[0];
+				$sql2="INSERT into inicio_sesion(password)
+												values('$row[2]') ";
 			    mysqli_query($conexion,$sql2);
 				
 				if($row["email_persona"]=='admin'){
@@ -146,6 +143,4 @@
 
 
 	}
-
-
- ?>
+?>

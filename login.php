@@ -60,10 +60,10 @@
 			success:function(r){
 
 				if(r==1){
-					window.location="vistas/inicio.php";
+					window.location="vista_coordGEN.php";
 				}else{
 					if(r==2){
-						window.location="perfil.php"
+						window.location="persona.php"
 					}else{
 						alert("No se pudo acceder usuario o clave incorrecto :(");
 					}

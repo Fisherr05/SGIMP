@@ -7,8 +7,8 @@
 	$obj= new usuarios();
 
 	$datos=array(
-	$_POST['email_persona'],
-	$_POST['contrasenia_persona']
+	$_POST['email'],
+	$_POST['password']
 	);
 
 	echo $obj->loginUser($datos);

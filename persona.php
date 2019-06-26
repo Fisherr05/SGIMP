@@ -1,95 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Todo App</title>
+    <!-- BOOTSTRAP 4  -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
-    <?php require_once "layout.php"; ?>
-
-    <div class="row">
-      <div class="container">
-        <div class="row p-4">
-        <div class="col-md-5">
-      <div class="card card-body">
-      <form action="{{url_for('añadir_estudiante')}}" method="POST">
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="ced_per" placeholder="Cédula">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="cod_rolPer" placeholder="Código del Rol">
-                  </div>
-                  <div class="form-group">
-                      <input type="password" class="form-control" name="pass_per1" placeholder="Contraseña">
-                  </div>
-                  <div class="form-group">
-                      <input type="password" class="form-control" name="pass_per2" placeholder="Repita Contraseña">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="nom_per" placeholder="Nombre">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="ape_per" placeholder="Apellido">
-                  </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" name="email_per" placeholder="Email">
-                  </div>
-                    <div class="form-group">
-                    <input type="text" class="form-control" name="tel_per" placeholder="Teléfono">
-                  </div>
-                   <div class="form-group">
-                    <input type="text" class="form-control" name="dir_per" placeholder="Dirección">
-                  </div>
-                  <button class="btn btn-primary btn-block">
-                    Guardar
-                  </button>
-                </form>
-      </div>
-    </div>
-    <div class="col-md-7">
-    <table class="table table-striped table-hover table-bordered table-sm bg-white">
-                  <thead>
-                    <tr>
-                      <td>Id</td>
-                      <td>Cédula</td>
-                      <td>Codigo Rol</td>
-                      <td>Contraseña</td>
-                      <td>Nombre</td>
-                      <td>Apellido</td>
-                      <td>Email</td>
-                      <td>Telefono</td>
-                      <td>Dirección</td>
-               
-                      
-                    </tr>
-                  </thead>
-                  <tbody id="facultades">
-                      <td>Id</td>
-                      <td>Cédula</td>
-                      <td>Codigo Rol</td>
-                      <td>Contraseña</td>
-                      <td>Nombre</td>
-                      <td>Apellido</td>
-                      <td>Email</td>
-                      <td>Telefono</td>
-                      <td>Dirección</td>
-                      <td>
-                        <a href="#" class="btn btn-secondary">editar</a>
-                      </td>
-                      <td>
-                        <a href="#" class="btn btn-danger btn-delete">borrar</a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-    </div>
-  </div>
-</div>
-        </div>
-      </div>
-    </div>
-    
+  <?php require_once "menu-persona.php"; ?>
+  <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Frontend Logic -->
 </body>
 </html>
