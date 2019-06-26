@@ -37,16 +37,23 @@
 		public function loginUser($datos){
 			$c=new conectar();
 			$conexion=$c->conexion();
+                        
 			//$password=sha1($datos[1]);
-			$sql="SELECT * 
+                        
+                  
+        try {
+            $conn = new mysqli('localhost', 'user4', 'fibeca0596', 'baseapp4');
+
+        if ($conn->connect_error) {
+            die('Error de Conexión (' . $conn->connect_errno . ') '
+                    . $conn->connect_error);
+        }
+            $sql="SELECT * 
 				from PERSONA 
 				where EMAIL='$datos[0]'";
-
-			$result=mysqli_query($conexion,$sql);
-			$row = mysqli_fetch_array($result);
-			//$a=password_verify($datos[1], $row[1]);
-
-			if(mysqli_num_rows($result) > 0 && password_verify($datos[1], $row[2]) ){
+            $result=$conn->query($sql);
+            $row=$result->fetch_array();
+            if(mysqli_num_rows($result) > 0 && password_verify($datos[1], $row[2]) ){
 				$_SESSION['email_persona']=$row[5];
 				$_SESSION['id_persona']=$row[0];
 				$sql2="INSERT into inicio_sesion(password)
@@ -63,6 +70,13 @@
 
 				return 0;
 			}
+        } catch (Exception $e) {
+            $error=$e->getMessage();
+        }
+        
+			
+
+			
 		
 		}
 
@@ -73,7 +87,7 @@
 
 			//$password=sha1($datos[1]);
 
-			$sql="SELECT id_persona 
+			$sql="SELECT  
 					from persona 
 					where email_persona='$datos[0]'
 					and contrasenia_persona='$datos[1]'"; 
