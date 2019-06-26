@@ -1,3 +1,8 @@
+<?php 
+	session_start();
+	if(isset($_SESSION['email_persona'])){
+		
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,3 +95,10 @@
     
 </body>
 </html>
+<?php 
+	}else{
+		session_unset();
+   		 session_destroy();
+		header("location:login.php");
+	}
+ ?>
