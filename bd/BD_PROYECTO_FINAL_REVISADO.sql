@@ -1,14 +1,14 @@
-/*--CREAR TABLA "PERSONA"*/ 
+
 create table INICIO_SESION(
 ID_USUARIO int not null,
-password varchar(10) not null,
+password VARCHAR (255) NOT NULL, 
 primary key (id_usuario)
 );
-
+/*--CREAR TABLA "PERSONA"*/ 
 CREATE TABLE PERSONA(
 ID_PERSONA INT unsigned not null auto_increment,
 CEDULA VARCHAR (10) NOT NULL CHECK(CEDULA LIKE '%[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]%'), 
-password VARCHAR (30) NOT NULL, 
+password VARCHAR (255) NOT NULL, 
 NOMBRE VARCHAR (40) NOT NULL,
 APELLIDO VARCHAR (40) NOT NULL,
 EMAIL VARCHAR (30) NOT NULL,
