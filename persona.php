@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
-<body>
+<body style="background-image:url(img/fondo.jpg)">
 <?php require_once "menu-persona.php"; ?>
   <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!--Bootstrap-->
