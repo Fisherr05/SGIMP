@@ -27,8 +27,7 @@
 							<p></p>
 							<span class="btn btn-primary" id="registro">Registrar</span>
 							<a href="login.php" class="btn btn-default">Regresar login</a>
-							<a href="registro.php" class="btn_regresa">Limpiar</a>
-						</form>
+											</form>
 					</div>
 				</div>
 			</div>

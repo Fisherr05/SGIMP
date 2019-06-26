@@ -28,13 +28,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">Usuarios</a>
+                <a class="nav-link" href="persona.php">Usuarios</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="estado.php">Actividades</a>
+                  <a class="nav-link" href="actividad.php">Actividades</a>
               </li>
                <li class="nav-item">
-                  <a class="nav-link" href="estado.php">Archivos</a>
+                  <a class="nav-link" href="#">Archivos</a>
               </li>
               </li>
               <li class="nav-item">

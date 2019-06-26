@@ -31,7 +31,7 @@
                 <a class="nav-link" href="#">Proyectos</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="estado.php">Subproyectos</a>
+                  <a class="nav-link" href="subProyectos.php">Subproyectos</a>
               </li>
                <li class="nav-item">
                   <a class="nav-link" href="estado.php">Estados</a>
@@ -49,7 +49,7 @@
               </li>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Iniciar sesión</a>
+                <a class="nav-link" href="login.php">Iniciar sesión</a>
               </li>
             </ul>
           </div>

@@ -31,7 +31,7 @@
                 <a class="nav-link" href="proyecto.php">Proyectos</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="estado.php">Subproyectos</a>
+                  <a class="nav-link" href="SubProyectos.php">Subproyectos</a>
               </li>
                <li class="nav-item">
                   <a class="nav-link" href="estado.php">Estados</a>
@@ -40,7 +40,7 @@
                   <a class="nav-link" href="componente.php">Componentes</a>
               </li>
                     <li class="nav-item">
-                  <a class="nav-link" href="componente.php">Actividades</a>
+                  <a class="nav-link" href="actividad.php">Actividades</a>
                         <li class="nav-item">
                   <a class="nav-link" href="componente.php">Archivos</a>
               </li>
@@ -49,7 +49,7 @@
               </li>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Iniciar sesión</a>
+                <a class="nav-link" href="login.php">Iniciar sesión</a>
               </li>
             </ul>
           </div>

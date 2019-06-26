@@ -31,20 +31,17 @@
                 <a class="nav-link" href="#">Proyectos</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="estado.php">Subproyectos</a>
+                  <a class="nav-link" href="Subproyecto.php">Subproyectos</a>
               </li>
                <li class="nav-item">
-                  <a class="nav-link" href="estado.php">Componentes</a>
+                  <a class="nav-link" href="componente.php">Componentes</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="componente.php">Actividades</a>
+                  <a class="nav-link" href="actividad.php">Actividades</a>
               </li>
                     <li class="nav-item">
                   <a class="nav-link" href="componente.php">Archivos</a>
-                        <li class="nav-item">
-                  <a class="nav-link" href="componente.php">Componentes</a>
-              </li>
-              </li>
+                                     </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Iniciar sesión</a>
               </li>
