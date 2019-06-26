@@ -5,5 +5,6 @@
 
   session_destroy();
 
-  header('Location: /php-login');
+  header('Location: /SGIMP/');
+
 ?>
