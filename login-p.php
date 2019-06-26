@@ -31,7 +31,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 	$_SESSION['id_persona']=$results['password'];
 	header("Location: /SGIMP/persona.php");
   } else {
-	$message = 'Sorry, those credentials do not match';
+	$message = 'Lo siento, las credenciales no coinciden';
   }
 }
 
