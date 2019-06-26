@@ -27,6 +27,7 @@
 							<p></p>
 							<span class="btn btn-primary" id="registro">Registrar</span>
 							<a href="login.php" class="btn btn-default">Regresar login</a>
+							<a href="registro.php" class="btn_regresa">Limpiar</a>
 						</form>
 					</div>
 				</div>
@@ -59,6 +60,7 @@
 
 					if(r==1){
 						alert("Agregado con exito");
+						window.location="registro.php"
 					}else{
 						alert("Fallo al agregar :(");
 					}
