@@ -37,9 +37,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
             $records->execute();
             $results = $records->fetch(PDO::FETCH_ASSOC); 
             if($email=='admin'){
-					header("Location: /SGIMP/admin.php");;
-				}else{
-				
+					header("Location: /SGIMP/admin.php");
 				}
         }
 	header("Location: /SGIMP/persona.php"); 
