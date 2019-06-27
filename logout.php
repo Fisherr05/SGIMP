@@ -5,6 +5,6 @@
 
   session_destroy();
 
-  header('Location: /SGIMP/');
+  header('Location: /webapp4/SGIMP/');
 
 ?>

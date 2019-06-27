@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_SESSION['email_persona'])) {
-  header('Location: /SGIMP/persona.php');
+  header('Location: /webapp4/SGIMP/persona.php');
 }
 $server = 'localhost';
 $username = 'user4';
@@ -19,14 +19,15 @@ try {
 
 
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
-  $records = $conn->prepare('SELECT id_persona, email, password FROM persona WHERE email = :email');
+  $records = $conn->prepare('SELECT id_persona, email, password FROM persona WHERE email = :email and password =:password');
   $records->bindParam(':email', $_POST['email']);
+  $records->bindParam(':password', $_POST['password']);
   $records->execute();
   $results = $records->fetch(PDO::FETCH_ASSOC);
 
   $message = '';
 
-  if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
+  if (count($results) > 0 ) {
 	$_SESSION['email_persona'] = $results['email'];
         $email=$results['email'];
 	$_SESSION['id_persona']=$results['password'];
@@ -37,10 +38,10 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
             $records->execute();
             $results = $records->fetch(PDO::FETCH_ASSOC); 
             if($email=='admin'){
-					header("Location: /SGIMP/admin.php");
+					header("Location: /webapp4/SGIMP/admin.php");
 				}
         }
-	header("Location: /SGIMP/persona.php"); 
+	header("Location: /webapp4/SGIMP/persona.php"); 
   } else {
 	$message = 'Lo siento, las credenciales no coinciden';
   }

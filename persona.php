@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Todo App</title>
     <!-- BOOTSTRAP 4  -->
@@ -19,7 +19,7 @@
     h1 { color: #FFFFFF; }
     h3 { color: #FFFFFF; }
   </style>
-<body style="background-image:url(img/fondo.jpg)">
+<body style="background-image:url(img/fondo.jpg)"> 
 <?php require_once "menu-persona.php"; ?>
   <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!--Bootstrap-->

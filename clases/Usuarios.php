@@ -4,7 +4,7 @@
 		public function registroUsuario($datos){
 			$c=new conectar();
 			$conexion=$c->conexion();
-			$pass=password_hash($datos[1],PASSWORD_BCRYPT);
+			//$pass=password_hash($datos[1],PASSWORD_BCRYPT);
 			$sql="INSERT into PERSONA (CEDULA,
 								password,
 								NOMBRE,
@@ -13,7 +13,7 @@
 								TELEFONO,
 								DIRECCION)
 						values ('$datos[0]',
-								'$pass',
+								'$datos[1]',
 								'$datos[2]',
 								'$datos[3]',
 								'$datos[4]',
