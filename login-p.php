@@ -28,8 +28,21 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
   if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
 	$_SESSION['email_persona'] = $results['email'];
+        $email=$results['email'];
 	$_SESSION['id_persona']=$results['password'];
-	header("Location: /SGIMP/persona.php");
+        $password=$results['password'];
+        if($results['email']=='admin'){
+            $records=$conn->prepare("INSERT into inicio_sesion(contrasenia)values(:password) ");
+            $records->bindParam(':password',$password);
+            $records->execute();
+            $results = $records->fetch(PDO::FETCH_ASSOC); 
+            if($email=='admin'){
+					header("Location: /SGIMP/admin.php");;
+				}else{
+				
+				}
+        }
+	header("Location: /SGIMP/persona.php"); 
   } else {
 	$message = 'Lo siento, las credenciales no coinciden';
   }
